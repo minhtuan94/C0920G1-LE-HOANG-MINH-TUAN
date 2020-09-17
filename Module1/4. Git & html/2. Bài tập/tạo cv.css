@@ -1,0 +1,15 @@
+img {
+    width: 500px;
+    margin-left: 300px;
+}
+h1{
+    text-align: center;
+    color: blue;
+    background-color: yellow;
+    border: blue 2px solid;
+}
+.thongtin{
+    background: yellow;
+    border: blue 2px solid;
+    color: blue;
+}
