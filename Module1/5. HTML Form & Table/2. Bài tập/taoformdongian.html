@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form đơn giản</title>
+    <style>
+
+        td {
+            color: orange;
+        }
+        body{
+            background-color: aqua;
+        }
+        div{
+        background-color: white;
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form>
+        <h1 style="color: white; background-color: red;text-align: center">SỞ THÍCH CỦA BẠN</h1>
+        <table>
+            <tr>
+                <td><label style="color: blue">Họ và tên</label></td><td><input type="text" name="hoten"></td>
+            </tr>
+            <tr>
+                <td><label style="color: blue">Email</label></td><td><input type="text" name="Email"> </td>
+            </tr>
+            <tr>
+                <td><label style="color: blue">Sở thích</label></td><td><input type="checkbox" value="Thể thao">Thể thao
+                <input type="checkbox" value="Âm nhạc">Âm nhạc
+                <input type="checkbox" value="Đọc sách"> Đọc sách</td>
+            </tr>
+
+            <tr>
+                <td></td><td><input type="checkbox" value="Lướt web">Lướt web
+                <input type="checkbox" value="Chơi game">Chơi game
+                <input type="checkbox" value="Điện ảnh">Điện ảnh <br></td>
+            </tr>
+            <tr>
+                <td></td><td><input type="checkbox" value="Du lịch">Du lịch <br></td>
+            </tr>
+            <tr>
+                <td></td><td><input type="submit" name="sm" value="Gửi thông tin">
+                <input type="reset" name="rs" value="Nhập lại"></td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+
+
+</body>
+</html>

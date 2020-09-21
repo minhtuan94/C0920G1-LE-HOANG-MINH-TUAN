@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lấy servey khách hàng</title>
+    <style>
+        select{
+            width: 500px;
+        }
+        .age{
+            padding: 0 5px 10px 8px;
+        }
+        td{
+            text-align: center;
+            border: 1px solid black;
+        }
+        th{
+            border: black solid 1px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <h3>Market Research Survey</h3>
+    <p>Please take a few moments to complete this satisfaction survey.</p>
+    <hr>
+    <div class="age">
+        <p>What is your age range?</p>
+        <select>
+            <option> 18-24 </option>
+            <option> 25-34 </option>
+            <option> 35-50 </option>
+            <option> 50+ </option>
+        </select>
+    </div>
+    <p>What is your yearly income range?</p>
+    <select>
+        <option> $0 - $25.000 </option>
+        <option> $25.001 - $50.000 </option>
+        <option> $50.001 - $100.000 </option>
+        <option> $100.000+ </option>
+    </select>
+    <p>Gender Identity</p>
+    <input type="radio" name="gender"> Male <br>
+    <input type="radio" name="gender"> Female <br>
+    <input type="radio" name="gender"> Nonbinary <br>
+    <input type="radio" name="gender"> Other <br>
+    <input type="text" size="25" maxlength="250" name="other_gender">
+    <p>Which of the following products have your purchased in the last 2 months. Please check all that apply.</p>
+    <input type="checkbox" name="pr1">Product 1 <br>
+    <input type="checkbox" name="pr2">Product 2 <br>
+    <input type="checkbox" name="pr3">Product 3 <br>
+    <p>How often would you use our new product?</p>
+    <input type="radio" name="often"> Daily <br>
+    <input type="radio" name="often"> Weekly <br>
+    <input type="radio" name="often"> Monthly <br>
+    <p>What would you pay for the new product?</p>
+    <span>$ </span><input type="number" name="num" size="40px"> . <input type="number" name="num1" size="10px"> <br>
+    <p><span style="margin-left: 15px">Dollars</span><span style="margin-left: 150px">Cents</span></p>
+    <p>What features would you like to see in the new product.</p>
+    <textarea cols="50" rows="20"></textarea>
+    <p>Please rate your level of agreement with the following statements</p>
+    <table style="border: 1px solid black">
+        <tr>
+            <th></th>
+            <th>Strongly Disagree</th>
+            <th>Disagree</th>
+            <th>Agree</th>
+            <th>Strong Agree</th>
+        </tr>
+        <tr>
+            <td>Our products are priced fairly.</td>
+            <td><input class="sd" type="radio" name="fairly"> <br><span class="sd1">1</span> </td>
+            <td><input class="d" type="radio" name="fairly"> <br><span class="sd2">2</span> </td>
+            <td><input class="a" type="radio" name="fairly"> <br><span class="sd3">3</span> </td>
+            <td><input class="sa" type="radio" name="fairly"> <br><span class="sd4">4</span> </td>
+        </tr>
+        <tr>
+            <td>Our products are high quality.</td>
+            <td><input class="sd" type="radio" name="h"> <br><span class="sd1">1</span> </td>
+            <td><input class="d" type="radio" name="h"> <br><span class="sd2">2</span> </td>
+            <td><input class="a" type="radio" name="h"> <br><span class="sd3">3</span> </td>
+            <td><input class="sa" type="radio" name="h"> <br><span class="sd4">4</span> </td>
+        </tr>
+        <tr>
+            <td>You would recommend our product to a friend or coworker.</td>
+            <td><input class="sd" type="radio" name="c"> <br><span class="sd1">1</span> </td>
+            <td><input class="d" type="radio" name="c"> <br><span class="sd2">2</span> </td>
+            <td><input class="a" type="radio" name="c"> <br><span class="sd3">3</span> </td>
+            <td><input class="sa" type="radio" name="c"> <br><span class="sd4">4</span> </td>
+        </tr>
+    </table>
+
+</form>
+</body>
+</html>
