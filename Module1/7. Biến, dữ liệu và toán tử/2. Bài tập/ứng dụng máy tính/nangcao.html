@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính nâng cao</title>
+    <style>
+        td{
+            background-color: darkgray;
+            padding: 5px 20px;
+            border: 1px gray solid;
+
+        }
+        table{
+            text-align: center;
+
+        }
+        .white{
+            background-color: white;
+        }
+        .blue{
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<input id="show" type="text" disabled size="75px">
+<table>
+    <tr>
+        <td><input id="rad" type="button" value="Rad" onclick="nut('Rad')"></td>
+        <td><input id="deg" type="button" value="Deg" onclick="nut('Deg')"></td>
+        <td><input id="x!" type="button" value="x!" onclick="nut('x!')"></td>
+        <td><input type="button" value="(" onclick="nut('(')"></td>
+        <td><input type="button" value=")" onclick="nut(')')"></td>
+        <td><input type="button" value="%" onclick="nut('%')"></td>
+        <td><input type="button" value="AC" onclick="nut('AC')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="lnv" onclick="nut('lnv')"></td>
+        <td><input type="button" value="sin" onclick="nut('sin')"></td>
+        <td><input type="button" value="ln" onclick="nut('ln')"></td>
+        <td class="white"><input type="button" value="7" onclick="nut('7')"></td>
+        <td class="white"><input type="button" value="8" onclick="nut('8')"></td>
+        <td class="white"><input type="button" value="9" onclick="nut('9')"></td>
+        <td><input type="button" value="/" onclick="nut('/')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="pi" onclick="nut('pi')"></td>
+        <td><input type="button" value="cos" onclick="nut('cos')"></td>
+        <td><input type="button" value="log" onclick="nut('log')"></td>
+        <td class="white"><input type="button" value="4" onclick="nut('4')"></td>
+        <td class="white"><input type="button" value="5" onclick="nut('5')"></td>
+        <td class="white"><input type="button" value="6" onclick="nut('6')"></td>
+        <td><input type="button" value="x" onclick="nut('x')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="e" onclick="nut('e')"></td>
+        <td><input type="button" value="tan" onclick="nut('tan')"></td>
+        <td><input type="button" value="sqrt" onclick="nut('sqrt')"></td>
+        <td class="white"><input type="button" value="1" onclick="nut('1')"></td>
+        <td class="white"><input type="button" value="2" onclick="nut('2')"></td>
+        <td class="white"><input type="button" value="3" onclick="nut('3')"></td>
+        <td><input type="button" value="-" onclick="nut('-')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Ans" onclick="nut('Ans')"></td>
+        <td><input type="button" value="EXP" onclick="nut('EXP')"></td>
+        <td><input type="button" value="xmu" onclick="nut('xmu')"></td>
+        <td class="white"><input type="button" value="0" onclick="nut('0')"></td>
+        <td class="white"><input type="button" value="." onclick="nut('.')"></td>
+        <td class="blue"><input type="button" value="=" onclick="nut('=')"></td>
+        <td><input type="button" value="+" onclick="nut('+')"></td>
+    </tr>
+</table>
+<script src="nangcao.js"></script>
+</body>
+</html>

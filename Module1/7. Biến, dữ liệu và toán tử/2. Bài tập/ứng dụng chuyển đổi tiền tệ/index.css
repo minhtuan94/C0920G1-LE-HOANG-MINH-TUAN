@@ -1,0 +1,18 @@
+table{
+    text-align: center;
+}
+td{
+    padding: 0 30px;
+}
+form{
+    margin-left: 300px;
+}
+body{
+    width: 600px;
+    background-color: gold;
+}
+.convert{
+    color: white;
+    background-color: plum;
+
+}
