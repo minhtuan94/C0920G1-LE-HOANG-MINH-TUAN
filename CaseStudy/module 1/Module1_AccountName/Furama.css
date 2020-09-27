@@ -1,0 +1,22 @@
+form{
+    padding-left: 50px;
+    width: 400px;
+    margin-left: 400px;
+    background-color: rgba(15, 11, 176, 0.57);
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px whitesmoke;
+
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url("joker.jpg");
+}
+h2{
+    text-align: center;
+    color: yellow;
+    text-shadow: 5px 5px 5px brown;
+}
+td{
+    color: white;
+}

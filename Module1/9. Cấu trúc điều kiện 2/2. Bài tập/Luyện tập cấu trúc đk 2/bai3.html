@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông</title>
+</head>
+<body>
+<form>
+    <label>Tính diện tích hình vuông</label> <br>
+    <input id="canha" type="number">
+    <input type="button" onclick="hv()" value="Tính">
+    <input type="reset" value="Đặt lại">
+    <p id="kq">Kết quả là: </p>
+
+</form>
+<script>
+    let dthv;
+   function hv() {
+        let a = document.getElementById('canha').value;
+        dthv = a * 4;
+        document.getElementById('kq').innerText = dthv;
+   }
+</script>
+</body>
+</html>

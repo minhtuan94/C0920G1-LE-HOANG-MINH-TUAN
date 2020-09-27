@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pt bậc 1</title>
+</head>
+<body>
+<form>
+    <label>Giải phương trình bậc 1</label> <br>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <input type="button" onclick="pt1()" value="Tính">
+    <p id="kq"></p>
+</form>
+<script>
+let x;
+    function pt1() {
+        let a = document.getElementById('num1').value;
+        let b = document.getElementById('num2').value;
+        if(a === 0) {
+            if(b === 0) {
+                document.writeln('PTVSN');
+            } else {
+                document.writeln('PTVN');
+            }
+        } else {
+            x = -b/a;
+            document.writeln(x);
+        }
+    }
+</script>
+</body>
+</html>

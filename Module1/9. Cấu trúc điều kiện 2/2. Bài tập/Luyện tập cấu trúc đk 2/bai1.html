@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<input type="number" id="num">
+<button onclick="CintoF()">Chuyển</button>
+<p id="kq"></p>
+<script>
+    let num = document.getElementById('num');
+    let result;
+    function CintoF() {
+        result = num.value * 9/5 + 32;
+        document.getElementById('kq').innerText=result;
+    }
+</script>
+</body>
+</html>

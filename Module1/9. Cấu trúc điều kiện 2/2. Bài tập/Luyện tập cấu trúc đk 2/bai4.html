@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình chữ nhật</title>
+</head>
+<body>
+<form>
+    <label>Tính diện tích hình chữ nhật khi biết 2 cạnh a,b</label> <br>
+    <input id="canha" type="number"><br>
+    <input id="canhb" type="number"><br>
+    <input type="button" onclick="dthcn()" value="Tính">
+    <p id="kq">Kết quả là</p>
+</form>
+<script>
+    let a = document.getElementById('canha');
+    let b = document.getElementById('canhb');
+    let kq;
+    function dthcn() {
+        kq = a.value * b.value;
+        document.getElementById('kq').innerText = kq;
+    }
+</script>
+</body>
+</html>

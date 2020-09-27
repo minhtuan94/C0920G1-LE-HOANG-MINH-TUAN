@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<form>
+    <input id="met" type="number">
+    <input type="button" onclick="chuyen()" value="Chuyển sang Feet">
+    <input type="reset" value="Đặt lại">
+    <p id="kq"></p>
+</form>
+<script>
+    let m = document.getElementById('met');
+    let ft;
+    function chuyen() {
+        ft = m.value * 3.2808;
+        document.getElementById('kq').innerText = ft;
+    }
+</script>
+</body>
+</html>

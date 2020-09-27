@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+    <style>
+        tr,td{
+            color: blue;
+            padding: 10px;
+            border: 1px gray solid;
+        }
+        table{
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<input id="num" disabled>
+<table border="1" width="500px" >
+    <tr>
+        <td onclick="inputNumber(1)">1</td>
+        <td onclick="inputNumber(2)">2</td>
+        <td onclick="inputNumber(3)">3</td>
+        <td onclick="inputNumber('+')">+</td>
+    </tr>
+    <tr>
+        <td onclick="inputNumber(4)">4</td>
+        <td onclick="inputNumber(5)">5</td>
+        <td onclick="inputNumber(6)">6</td>
+        <td onclick="inputNumber('-')">-</td>
+    </tr>
+    <tr>
+        <td onclick="inputNumber(7)">7</td>
+        <td onclick="inputNumber(8)">8</td>
+        <td onclick="inputNumber(9)">9</td>
+        <td onclick="inputNumber('*')">*</td>
+    </tr>
+    <tr>
+        <td onclick="clearNumber()">C</td>
+        <td onclick="inputNumber(0)">0</td>
+        <td onclick="calculator()">=</td>
+        <td onclick="inputNumber('/')">/</td>
+    </tr>
+</table>
+<script src="Caculator.js"></script>
+</body>
+</html>
