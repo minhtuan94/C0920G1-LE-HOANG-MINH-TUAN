@@ -1,6 +1,7 @@
 let show;
 
 function priceDown() {
+    let name = document.getElementById('names').value;
     let paper = document.getElementById('paper').value;
     let birthday = document.getElementById('birthday').value;
     let email = document.getElementById('email').value;

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+
+<body>
+<input type="number" id="num1">
+<input type="number" id="num2">
+<button onclick="f()">Hiển thị số</button>
+<p id="kq"></p>
+<script>
+    function f() {
+        let a = document.getElementById('num1').value;
+        let b = document.getElementById('num2').value;
+        if (a > b) {
+            return document.getElementById('kq').innerText = "Số " + document.getElementById('num1').value + "lớn hơn " + document.getElementById('num2').value;
+        } else {
+            return document.getElementById('kq').innerText = document.getElementById('num1').value + document.getElementById('num2').value
+        }
+    }
+</script>
+</body>
+</html>

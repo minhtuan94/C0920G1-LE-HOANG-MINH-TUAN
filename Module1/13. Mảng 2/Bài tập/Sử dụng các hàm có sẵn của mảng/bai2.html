@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let num = prompt('Nhập dãy số bất kỳ');
+    let str = num.toString();//khai báo str là chuỗi mà người dùng nhập vào
+    let result = [str[0]]; //khai báo biến result là một mảng có giá trị là vị trí đầu tiên của str
+    for (let x = 1; x < str.length; x++) //chạy x từ 1 đến số lượng mà người dùng nhập vào
+        if (str[x - 1] % 2 === 0 && str[x] % 2 === 0) { //nếu số str ở vị trí trước x chi hết cho 2 và số str ở vị trí x chia hết cho 2
+            result.push('-', str[x]);//thêm vào result dấu - vào cuối vị trí x
+        } else {
+            result.push(str[x]);//thêm giá trị ở vị trí x vào cuổi mảng
+        }
+            document.writeln(result.join(''));//in ra result thêm hàm join
+</script>
+</body>
+</html>

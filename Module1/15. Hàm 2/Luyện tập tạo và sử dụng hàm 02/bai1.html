@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<input type="number" id="num">
+<input type="button" onclick="doubleNum()" value="Tính bình phương">
+<p id="kq"></p>
+<script>
+    function doubleNum() {
+        document.getElementById('kq').innerText = document.getElementById('num').value * document.getElementById('num').value;
+    }
+</script>
+</body>
+</html>

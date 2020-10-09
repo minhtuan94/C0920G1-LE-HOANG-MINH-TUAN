@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị nhỏ nhất của mảng</title>
+</head>
+<body>
+<script>
+    // Xây dựng hàm nhận vào một tham số là một mảng cho trước. Hàm thực hiện tìm giá trị nhỏ nhất trong mảng và trả về giá trị đó.
+    //     Sử dụng hàm vừa xây dựng trên với mảng như sau:
+    // Bước 1: Xây dựng hàm
+    // Các bước thực thi trong hàm:
+    //
+    //     Giả sử phần tử đầu tiên trong mảng là giá trị nhỏ nhất. Gán giá trị của phần tử này cho biến min.
+    //
+    //     Duyệt mảng từ phần tử tiếp theo. Kiểm tra nếu giá trị của phần tử tiếp theo trong mảng nhỏ hơn min thì gán min = arr[i] (với i ở vị trí của phần tử tiếp theo)
+    //
+    // Kết thúc duyệt mảng, tìm được giá trị min trong mảng. Hàm trả về giá trị min đó.
+
+    // Bước 2: Sử dụng hàm
+    // let arr = [7, 12, 6, 9, 20, 56, 89];
+
+    function minArray(r) {
+        if(r.length === 0)
+            return -1;
+        let min = r[0];
+
+        for(let i = 1; i < r.length; i++){
+            if(r[i] < min){
+                min = r[i];
+            }
+        }
+        return min;
+    }
+    let arr1 = [3, 5, 1, 8, -3, 7, -8];
+    let min = minArray(arr1);
+    alert(min);
+    // Bước 3: Chạy chương trình. Quan sát kết quả.
+    //     Bước 4: Tương tự với mảng được khởi tạo các phần tử mặc định
+
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp Date</title>
+</head>
+<body>
+<form>
+    <label>Hiển thị ngày tháng năm</label><br>
+    <input type="number" id="day" placeholder="Nhập ngày">
+    <input type="number" id="month" placeholder="Nhập tháng">
+    <input type="number" id="year" placeholder="Nhập năm">
+    <input type="button" onclick="checkDate()" value="Hiển thị">
+    <p id="show">Nơi hiển thị ngày tháng năm</p>
+</form>
+<script>
+    function checkDate() {
+        let a = document.getElementById('day').value;
+        let b = document.getElementById('month').value;
+        let c = document.getElementById('year').value;
+// Bước 1: Xây dựng lớp MyDate với phương thức khởi tạo có 3 tham số truyền vào
+        class MyDate {
+            constructor(day, month, year) {
+                this.day = day;
+                this.month = month;
+                this.year = year;
+            }
+
+            // Bước 2: Xây dựng phương thức trả về ngày, tháng, năm
+            getDay() {
+                return this.day;
+            }
+
+            getMonth() {
+                return this.month;
+            }
+
+            getYear() {
+                return this.year;
+            }
+
+            // Bước 3: Xây dựng phương thức thiết đặt lại giá trị các thuộc tính day, month, year
+            setDay(day) {
+                this.day = day;
+            }
+
+            setMonth(month) {
+                this.month = month;
+            }
+
+            setYear(year) {
+                this.year = year;
+            }
+        }
+        // Bước 4: Sử dụng lớp vừa tạo. Tạo đối tượng date với ngày:2, tháng:2, năm: 2007:
+        let date = new MyDate(a, b, c);
+        // Bước 5: Truy cập phương thức của lớp date như sau:
+        let day = date.getDay(); // 2
+
+        let month = date.getMonth(); // 2
+
+        let year = date.getYear(); // 2007
+        // Bước 6: Hiển thị ngày, tháng, năm:
+        document.getElementById('show').innerText = day + "/" + month + "/" + year;
+        date.setDay(a);
+        date.setMonth(b);
+        date.setYear(c);
+        document.getElementById('show').innerText = day + "/" + month + "/" + year;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp Hình Tròn</title>
+</head>
+<input type="number" placeholder="Nhập bán kính" id="r">
+<input type="button" onclick="cal()" value="Tính Diện tích hình tròn">
+<p id="showr"></p>
+<p id="showa"></p>
+<body>
+<script>
+    function cal() {
+        let r = document.getElementById('r').value;
+
+        class Circle {
+            constructor(radius) {
+                this.radius = radius;
+            };
+
+            getRadius() {
+                return this.radius;
+            }
+
+            getArea() {
+                return Math.PI * this.radius * this.radius;
+            }
+
+        }
+
+        let circle = new Circle(r); //tạo đối tượng với bán kính là r
+        let radius = circle.getRadius();
+        let area = circle.getArea();
+        document.getElementById('showa').innerText = area;
+        document.getElementById('showr').innerText = radius;
+    }
+</script>
+</body>
+</html>

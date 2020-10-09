@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<input type="number" id="num1"><br>
+<input type="number" id="num2"><br>
+<input type="number" id="num3"><br>
+<button onclick="checkGTNN()">Kiểm tra</button>
+<p id="kq"></p>
+<script>
+    function checkGTNN() {
+        let a = document.getElementById('num1').value;
+        let b = document.getElementById('num2').value;
+        let c = document.getElementById('num3').value;
+        if (a < b) {
+            if (b < c) {
+                document.getElementById('kq').innerText = a + " là số nhỏ nhất";
+            }
+        } else {
+            if (b < c) {
+                document.getElementById('kq').innerText = b + " là số nhỏ nhất";
+            } else {
+                document.getElementById('kq').innerText = c + " là số nhỏ nhất";
+            }
+        }
+    }
+</script>
+</body>
+</html>

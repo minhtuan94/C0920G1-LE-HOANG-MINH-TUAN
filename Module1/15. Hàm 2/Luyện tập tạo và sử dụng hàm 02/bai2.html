@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính dt, cv hình tròn</title>
+</head>
+<body>
+<input type="number" oninput="dtcv(this.value)" placeholder="Nhập bán kinh"> <br>
+<p id="cv">Tính chu vi</p>
+<p id="dt">Tính diện tích</p>
+<script>
+    const Pi = 3.14;
+    function dtcv(a) {
+        document.getElementById('cv').innerText = 2*Pi*a;
+        document.getElementById('dt').innerText = Pi*a*a;
+    }
+</script>
+</body>
+</html>

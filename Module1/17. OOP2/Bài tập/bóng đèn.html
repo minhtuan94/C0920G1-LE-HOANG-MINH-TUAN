@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lamp</title>
+</head>
+<body>
+<h3>Bật tắt bóng đèn</h3>
+<img src="pic_bulboff.gif" id="lamp"><br>
+<button id="switch" onclick="turnOn_turnOff_lamp()">Bật tắt bóng đèn</button>
+<h4 id="result">Bóng đèn đang tắt</h4>
+<script>
+    class SwitchButton{ // gọi lớp
+        constructor(status) {
+            this.status = status;
+        }
+        turnOn_turnOff() { //tạo hàm tắt bật là hành vi của lớp
+            this.status = !this.status;
+        };
+    }
+    class Light{ //gọi lớp
+        constructor(button) {
+            this.button = button;
+        }
+        switch () {
+            if (this.button.status === true) { //nếu nút nhấn có giá trị true
+                document.getElementById('lamp').src = "pic_bulbon.gif";
+                document.getElementById('result').innerText = "Bóng đèn đang bật";
+            } else { // nút nhấn có giá trị false
+                document.getElementById('lamp').src = "pic_bulboff.gif";
+                document.getElementById('result').innerText = "Bóng đèn đang tắt";
+            }
+        }
+    }
+    let switchButton1 = new SwitchButton(false); //tạo đối tượng mới
+    let lamp = new Light(switchButton1);
+    function turnOn_turnOff_lamp() {
+        switchButton1.turnOn_turnOff();
+        lamp.switch();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<form>
+<label>Hình chữ nhật</label>
+<input type="number" id="length">
+<input type="number" id="width">
+<input type="button" onclick="checkArea()" value="Tính">
+<input type="reset" value="Đặt lại">
+<p>Chu vi</p>
+<p id="showp"></p>
+<p>Diện tích</p>
+<p id="showa"></p>
+</form>
+<script>
+    function checkArea() {
+        let a = document.getElementById('length').value;
+        let b = document.getElementById('width').value;
+        class Rectangle {
+            constructor(length, width) {
+                this.length = length;
+                this.width = width;
+            }
+            getArea() {
+                return this.length * this.width; //tính diện tích
+            }
+            getPerimeter() {
+                return 2 * (this.length + this.width); //tính chu vi
+            }
+        }
+        let rectangle = new Rectangle(a,b); //khởi tạo đối tượng
+        let area = rectangle.getArea();
+        let perimeter = rectangle.getPerimeter();
+        document.getElementById('showa').innerText = area;
+        document.getElementById('showp').innerText = perimeter;
+    }
+
+</script>
+</body>
+</html>

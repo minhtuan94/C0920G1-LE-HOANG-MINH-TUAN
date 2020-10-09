@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>yêu cầu 3</title>
+    <link rel="stylesheet" href="yc3.css" type="text/css">
+</head>
+<body>
+<div class="w3-container">
+    <!--    Bảng nhập-->
+    <form class="fo1">
+        <h2 style="color: blue; text-align: center; text-shadow: 1px 1px 1px yellow">Thông tin khách hàng</h2>
+        <table class="tb1">
+            <tr>
+                <td>Họ tên</td><td><input type="text" name="hoten" id="names"></td>
+            </tr>
+            <tr>
+                <td>Số CMND</td><td><input type="number" name="paper" id="paper"></td>
+            </tr>
+            <tr>
+                <td></td><td id="checkcmnd"></td>
+            </tr>
+            <tr>
+                <td>Ngày tháng năm sinh</td><td><input type="date" name="birthday" id="birthday"></td>
+            </tr>
+            <tr>
+                <td>Email</td><td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td><td><input type="text" name="address" id="address"></td>
+            </tr>
+            <tr>
+                <td>Loại Khách hàng</td>
+                <td>
+                    <select id="typeCustomer">
+                        <option value="diamond">Diamond</option>
+                        <option value="platinum">Platinum</option>
+                        <option value="gold">Gold</option>
+                        <option value="silver">Silver</option>
+                        <option value="member">Member</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Giảm giá</td><td><input type="number" name="decrease" id="discount"></td>
+            </tr>
+            <tr>
+                <td>Số lượng đi kèm</td><td><input type="number" name="num" id="quanlityInclued"></td>
+            </tr>
+            <tr>
+                <td>Số ngày thuê</td><td><input type="number" name="numDay" id="renDays"></td>
+            </tr>
+            <tr>
+                <td>Loại dịch vụ</td>
+                <td>
+                    <select id="typeService">
+                        <option value="villa">Villa - 500$/ 1 ngày</option>
+                        <option value="house">House - 300$/1 ngày</option>
+                        <option value="room">Room - 100$/1 ngày</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Loại phòng thuê</td>
+                <td>
+                    <select id="typeRoom">
+                        <option value="vip">Vip</option>
+                        <option value="business">Business</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <input type="button" value="Hiển thị" onclick="showinfo()">
+        <input type="reset" value="Đặt lại"> <br>
+    </form>
+    <!--    Bảng xuất-->
+    <form class="fo2">
+        <table class="tb2">
+            <tr>
+                <td>Họ tên</td><td id="hoten"></td>
+            </tr>
+            <tr>
+                <td>Số CMND</td><td id="cmnd"></td>
+            </tr>
+            <tr>
+                <td>Ngày tháng năm sinh</td><td id="ngaysinh"></td>
+            </tr>
+            <tr>
+                <td>Email</td><td id="thudientu"></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td><td id="diachi"></td>
+            </tr>
+            <tr>
+                <td>Loại Khách hàng</td>
+                <td id="loaikhachhang">
+                </td>
+            </tr>
+            <tr>
+                <td>Giảm giá</td><td id="giamgia"></td>
+            </tr>
+            <tr>
+                <td>Số lượng đi kèm</td><td id="soluongdikem"></td>
+            </tr>
+            <tr>
+                <td>Số ngày thuê</td><td id="songaythue"></td>
+            </tr>
+            <tr>
+                <td>Loại dịch vụ</td>
+                <td id="loaidichvu">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Loại phòng thuê</td>
+                <td id="loaiphongthue">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Tổng tiền</td><td><p id="showtotal"></p></td>
+            </tr>
+        </table>
+    </form> <br><br>
+</div>
+<hr style="border: 3px white solid">
+<a style="color: yellow; text-decoration: none" href="../Yêu%20cầu%202/yc2.html">Quay về yêu cầu 2</a><br><br>
+<a style="color: yellow; text-decoration: none" href="../Module1_AccountName/Furama.html">Quay về yêu cầu 1</a>
+</body>
+<script src="yc3.js"></script>
+</html>

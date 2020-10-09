@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt_function_practice_2_6</title>
+</head>
+<body>
+<p><input id = "num" type="text" onchange="getValue1()"> </p>
+<p id="show"> </p>
+<script>
+    function getValue1() {
+        let x = parseInt(document.getElementById("num").value) ;
+        if (x>0) {
+            x = 'true';
+        } else {
+            x = 'false';
+        }
+        document.getElementById("show").innerHTML = x ;
+    }
+
+</script>
+</body>
+</html>

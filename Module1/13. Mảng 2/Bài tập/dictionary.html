@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển đơn giản</title>
+</head>
+<body>
+<form>
+    <label>Từ điển</label>
+    <input type="text" oninput="vietlish(this.value)">
+    <input type="reset" value="Nhập lại">
+    <p id="outPut"></p>
+</form>
+<script>
+    function vietlish(st) {
+        let arr = ["people","animal","tree"];
+        let arr1 = ["Người","Động vật","Cây"];
+        for (let i = 0; i < arr.length; i++){
+            if (arr[i] === st){
+                document.getElementById("outPut").innerHTML = arr1[i];
+                break;
+            }else {
+                document.getElementById("outPut").innerHTML = "Không tìm thấy";
+            }
+        }
+    }
+
+    
+</script>
+</body>
+</html>

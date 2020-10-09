@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number; //tạo biến number
+    let check = false; // khai báo biến check là sai
+    do{
+        number =parseInt(prompt("nhâp number")); //cho người dùng nhập vào số bất kỳ
+    }  while (isNaN(number)); //kiểm tra có phải là số hay ko
+    for (let i=2; i<=Math.sqrt(number);i++) { //cho biến i chạy từ 2 đến căn của number
+        if(number%i ===0) { //nếu số người dùng nhập vào chia hết cho i
+            check =true; // nếu số người dùng nhập chia hết cho i thì gán cho giá trị đúng
+            break;
+        }
+    }
+    if(!check) {
+        alert("đây là số nguyên tố"); //nếu check có giá trị sai thì đây là số nguyên tố
+    } else {
+        alert("đây không phải là số nguyên tố"); //nếu check có giá trị đúng đây ko phải là số nguyên tố
+    }
+</script>
+</body>
+</html>
