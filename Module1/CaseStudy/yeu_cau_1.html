@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 1</title>
+</head>
+<body>
+<script>
+    let name;
+    let cmnd;
+    let birthday;
+    let email;
+    let address;
+    let typeService;
+    let typeRoom;
+    let typeCustomer;
+    let discount;
+    let quantityIncluded;
+    let rentDays;
+    let totalPays;
+    name = prompt("Nhập vào tên khách hàng: ");
+    cmnd = prompt("Nhập vào tên cmnd: ");
+    birthday = prompt("Nhập vào tên birthday: ");
+    email = prompt("Nhập vào tên email: ");
+    address = prompt("Nhập vào tên address: ");
+    typeService = prompt("Nhập vào tên typeService: ");
+    typeRoom = prompt("Nhập vào loại phòng");
+    typeCustomer = prompt("Nhập vào tên typeCustomer: ");
+    discount = prompt("Nhập vào tên discount: ");
+    quantityIncluded = prompt("Nhập vào tên quantityIncluded: ");
+    rentDays = prompt("Nhập vào tên rentDays: ");
+    totalPays = 300*rentDays*(1-discount/100);
+    alert("Tên là: "+name+"\n"+"Chứng minh nhân dân là: "+cmnd+"\n"+"Ngày sinh là: "+birthday+"\n"+"Email là: "+email+"\n"
+        +"Địa chỉ là: "+address+"\n"+"Loại dịch vụ là: "+typeService+"\n"+"Loại phòng là: "+typeRoom+"\n"
+        +"Loại khách hàng là: "+typeCustomer+"\n" +"Giảm giá là: "+discount+"\n"+"Số lượng đi kèm là: "+quantityIncluded+"\n"
+        +"Số ngày thuê là: "+rentDays+"\n" +"Tổng giá là: "+totalPays);
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 3</title>
+</head>
+<body>
+<script>
+    let name;
+    let cmnd;
+    let birthday;
+    let email;
+    let address;
+    let typeService;
+    let typeRoom;
+    let typeCustomer;
+    let discount;
+    let quantityIncluded;
+    let rentDays;
+    let totalPays;
+    let check = false;
+
+    let tempName = "";
+    name = prompt("Nhập vào tên khách hàng: ");
+    name = name.trim().toLowerCase();
+    for (let i=0;i<name.length++;i++) {
+        if (name.charAt(i)===" " && name.charAt(i+1)===" ") {
+            continue;
+        }
+        if (i===0||name.charAt(i-1)===" ") {
+            tempName+=name.charAt(i).toUpperCase();
+            continue;
+        }
+        tempName+=name.charAt(i);
+    }
+    name = tempName;
+    alert(name);
+    do {
+        cmnd = prompt("Nhập vào tên cmnd: ");
+        if (!isNaN(cmnd)) {
+            cmnd = Number.parseFloat(cmnd);
+        }
+        if (!Number.isInteger(cmnd)) {
+            alert("CMND không phải là số nguyên");
+            continue;
+        }
+        if (cmnd<10000000||cmnd>99999999) {
+            alert("CMND không đúng định dạng")
+            continue;
+        }
+        check = true;
+    } while (!check);
+    check = false;
+
+    birthday = prompt("Nhập vào tên birthday: ");
+    do {
+        let countAt = 0;
+        let countDoc = 0;
+        email = prompt("Nhập vào tên email: ");
+        for (let i=0;i<email.length;i++) {
+            if (email.charAt(i)==="@") {
+                countAt++;
+                for (let j=i+1;j<email.length;j++) {
+                    if (email.charAt(j)===".") {
+                        countDoc++;
+                    }
+                }
+            }
+        }
+        if (countAt!==1||countDoc<1) {
+            alert("email bạn nhập không đúng")
+        } else {
+            check = true;
+        }
+    } while (!check);
+    check =false;
+    address = prompt("Nhập vào tên address: ");
+    typeService = prompt("Nhập vào tên typeService: ");
+    typeRoom = prompt("Nhập vào loại phòng");
+    typeCustomer = prompt("Nhập vào tên typeCustomer: ");
+    discount = prompt("Nhập vào tên discount: ");
+    quantityIncluded = prompt("Nhập vào tên quantityIncluded: ");
+    rentDays = prompt("Nhập vào tên rentDays: ");
+</script>
+</body>
+</html>
