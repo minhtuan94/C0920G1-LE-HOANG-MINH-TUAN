@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    while (count < 100) {
+        let n;
+        do {
+            n = parseInt(prompt("Nhap diem "))
+        } while (n < 0 || n > 100 || isNaN(n));
+        if (n < 48) {
+            alert('truot');
+        } else {
+            let temp = parseInt(n / 5) * 5 + 5;
+            if (temp - n < 3) {
+                alert(temp);
+            } else {
+                alert(n);
+            }
+        }
+        count++;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n=3;
+    let sum = 1;
+    let gt = 1;
+    // for (let i=0;i<n;i++) {
+    //     sum+=sum*i;
+    //     for (let j=0;j<sum;j++) {
+    //         gt = gt*j;
+    //     }
+    //  }
+    // alert(sum);
+    // alert(gt);
+    for (let i=0;i<n;i++) {
+        for (let j=0;j<sum;j++) {
+            sum = sum + sum*j;
+        }
+        gt += gt*i;
+    }
+    alert(sum);
+    alert(gt);
+</script>
+</body>
+</html>

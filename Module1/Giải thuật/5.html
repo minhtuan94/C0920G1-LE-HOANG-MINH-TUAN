@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập n: "));
+    let m =1;
+    let s = 0;
+    for (let i=1;i<=n;i++) {
+        console.log(i);
+        for (let j=0;j<=2*i-2;j++) {
+            console.log(j);
+            m = m*(2*i-1-j);
+        }
+        s += 1/m;
+        m=1;
+    }
+    document.write(s);
+</script>
+</body>
+</html>

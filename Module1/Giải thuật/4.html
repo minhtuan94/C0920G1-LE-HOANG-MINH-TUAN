@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập n"));
+    let p = 1;
+    let k = 0;
+    let s = 0;
+    for (let i=1;i<=n;i++) {
+        p = p * i;
+        k = k + 1/p;
+        s = 15-k;
+    }
+    document.write(s);
+</script>
+</body>
+</html>
