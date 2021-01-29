@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Cho 2 số nguyên dương a và b. Hãy tìm ước chung lớn nhất của 2 số này.
+    // Input : 2 số a,b
+    // Output : Ước chung lớn nhất của 2 số a, b
+    function UCLN( a, b)
+    {
+        while ( a !== b)
+        {
+            if (a > b)
+                a = a - b;
+            else
+                b = b - a;
+        }
+
+        return a; // or return b; a = b
+    }
+
+    // Cho 2 số nguyên dương a và b. Hãy tìm bội chung nhỏ nhất của 2 số này
+    // Input : 2 số a,b
+    // Output : Bội chung nhỏ nhất
+    /**
+     * @return {number}
+     */
+    function BCNN( a, b)
+    {
+        let result = UCLN(a, b);
+        return a * b / result;
+    }
+    let result = UCLN(30, 40);
+    document.write("ước chung lớn nhất là: "+result);
+    document.write('<br>');
+
+    result = BCNN(30, 40);
+    document.write("bội chung nhỏ nhất là: "+result);
+</script>
+</body>
+</html>

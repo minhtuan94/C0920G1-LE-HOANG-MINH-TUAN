@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Circle {
+        constructor(x, y, radius, color) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
+        }
+
+        getX() {
+            return this.x;
+        }
+
+        getY() {
+            return this.y;
+        }
+
+        getRadius() {
+            return this.radius;
+        }
+
+        getColor() {
+            return this.color;
+        }
+
+        setX(x) {
+            this.x = x;
+        }
+
+        setY(y) {
+            this.y = y;
+        }
+
+        setRadius(radius) {
+            this.radius = radius;
+        }
+
+        setColor(color) {
+            this.color = color;
+        }
+        render(){
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            let radius = Math.floor(Math.random() * 100);
+            let color = getColor(#000000);
+            let x = Math.random() * window.innerWidth;
+            let y = Math.random() * window.innerHeight;
+            let circle= new Circle(x, y, radius);
+            ctx.beginPath();
+            ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+            ctx.fillStyle = color;
+            ctx.fill();
+        }
+    }
+
+    render()
+</script>
+</body>
+</html>

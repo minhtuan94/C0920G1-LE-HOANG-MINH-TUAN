@@ -18,10 +18,6 @@
             addNewCustomer();
             break;
         }
-        case 2: {
-            displaycustomer();
-            break;
-        }
         case 3: {
             displayTotalpays();
         }
@@ -29,9 +25,6 @@
             alert("Failed");
         }
         }
-    }
-    function displaycustomer() {
-
     }
     function displayTotalpays() {
         let temp = "";
@@ -45,9 +38,9 @@
         let checkvalid=false;
         let cus = new Customer();
         let name = prompt("Input name: ");
-        let cmnd = prompt("Input cmnd: ");
-        let email = prompt("Input email: ");
-        let birthday = prompt("Input birthday: ");
+        let cmnd;
+        let email;
+        let birthday;
         do {
             cmnd = prompt("Input cmnd: ");
             if (regexCMND.test(cmnd)) {
@@ -71,7 +64,7 @@
             if (regexEmail.test(email)) {
                 checkvalid = true; // để thoát vòng lặp
             } else {
-                alert("email không hợp lệ, yêu cầu nhập lại");
+                alert("email không hợp lệ, yêu cầu nhập lại")
             }
         } while (!checkvalid);
         checkvalid = false;

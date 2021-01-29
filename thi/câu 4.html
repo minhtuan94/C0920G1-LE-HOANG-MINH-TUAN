@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>câu 4</title>
+</head>
+<body>
+<div id="display"></div>
+<div id="edit"></div>
+
+<script>
+    class Customer {
+        constructor(id, name, phone, address, email) {
+            this.id = id;
+            this.name = name;
+            this.phone = phone;
+            this.address = address;
+            this.email = email;
+        }
+        getId() {
+            return this.id;
+        }
+        setId(value) {
+            this.id = value;
+        }
+        getName() {
+            return this.name;
+        }
+        setName(value) {
+            this.id = value;
+        }
+        getPhone() {
+            return this.phone;
+        }
+        setPhone(value) {
+            this.id = value;
+        }
+        getAddress() {
+            return this.address;
+        }
+        setAddress(value) {
+            this.id = value;
+        }
+        getEmail() {
+            return this.email;
+        }
+        setEmail(value) {
+            this.id = value;
+        }
+    }
+    let customer = [];
+    customer.push(new Customer(1, "Tuấn", "0123456",  "Trần cao vân", "tuan@tuan.com"));
+    customer.push(new Customer(2, "Bảo", "0123456","Nguyễn chánh", "bao@tuan.com"));
+    customer.push(new Customer(3, "Khang","0123456", "an dương vương", "khang@tuan.com"));
+    function displayCus() {
+        let temp = "";
+        temp += "<table>";
+        temp += "<tr>" +
+            "<th>Id</th>" +
+            "<th>Name</th>" +
+            "<th>Phone</th>" +
+            "<th>Address</th>" +
+            "<th>Email</th>" +
+            "</tr>";
+        for (let i in customer) {
+            temp += "<tr>" +
+                "<td>" + customer[i].getId() + "</td> " +
+                "<td>" + customer[i].getName() + "</td> " +
+                "<td>" + customer[i].getPhone() + "</td> " +
+                "<td>" + customer[i].getAddress() + "</td> " +
+                "<td>" + customer[i].getEmail() + "</td> " +
+                "</tr>"
+        }
+        temp += "</table>";
+        document.getElementById("display").innerHTML = temp;
+    }
+    function editCustomer(index) {
+        let temp = "<h1>Edit Customer</h1>";
+        temp += "<input type='text' disabled value='" + customer[index].getId() + "'></br>"
+            + "<input type='text' id='name' value='" + customer[index].getName() + "'></br>"
+            + "<input type='text' id='phone' value='" + customer[index].getPhone() + "'></br>"
+            + "<input type='text' id='address' value='" + customer[index].getAddress() + "'></br>"
+            + "<input type='text' id='email' value='" + customer[index].getEmail() + "'></br>"
+            + "<input type='button'  value='Edit' onclick='edit(" + index + ")'></br>";
+        document.getElementById("edit").innerHTML = temp;
+    }
+    function edit(index) {
+        customer[index].setName(document.getElementById("nameEdit").value);
+        customer[index].setPrice(document.getElementById("priceEdit").value);
+        customer[index].setAmount(document.getElementById("amountEdit").value);
+        document.getElementById("edit").innerText = "";
+        displayProduct();
+    }
+    function createCustomer() {
+        let temp = "<h1>Create Customer</h1>";
+        temp += "Id: <input type='text' id='idCus' class='form-control'></br>"
+            + "Name: <input type='text' id='name' class='form-control'></br>"
+            + "Phone: <input type='text' id='phone' class='form-control'></br>"
+            + "Address: <input type='text' id='address' class='form-control'></br>"
+            + "Email: <input type='text' id='email' class='form-control'></br>"
+            + "<input type='button' value='Create' onclick='create()'></br>";
+        document.getElementById("edit").innerHTML = temp;
+        displayCus();
+    }
+    function create() {
+            let id = (document.getElementById("idCus").value);
+            let name = (document.getElementById("name").value);
+            let phone = (document.getElementById("phone").value);
+            let address = (document.getElementById("address").value);
+            let email = (document.getElementById("email").value);
+            let cus = new Customer(id, name, phone, address, email);
+        customer.push(cus);
+            document.getElementById("edit").innerText = "";
+            displayProduct();
+        }
+    displayCus();
+</script>
+</body>
+</html>

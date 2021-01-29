@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+    <link rel="stylesheet" href="Furama.css">
+</head>
+<body>
+<!--Yêu cầu 1: Biến, kiểu dữ liệu và toán tử-->
+<!--Task 1: Người dùng nhập-->
+<form id="form" action="Furama.html">
+<h2>Information customer</h2>
+<table>
+    <tr>
+        <td>Họ tên</td><td><input type="text" name="hoten" id="names"></td>
+    </tr>
+    <tr>
+        <td>Số CMND</td><td><input type="number" name="paper" id="paper"></td>
+    </tr>
+    <tr>
+        <td>Ngày tháng năm sinh</td><td><input type="date" name="birthday" id="birthday"></td>
+    </tr>
+    <tr>
+        <td>Email</td><td><input type="email" name="email" id="email"></td>
+    </tr>
+    <tr>
+        <td>Địa chỉ</td><td><input type="text" name="address" id="address"></td>
+    </tr>
+    <tr>
+        <td>Loại Khách hàng</td>
+        <td>
+            <select id="level">
+        <option value="diamond">Diamond</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="member">Member</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Giảm giá</td><td><input type="number" name="decrease" id="decrease"></td>
+    </tr>
+    <tr>
+        <td>Số lượng đi kèm</td><td><input type="number" name="num" id="num"></td>
+    </tr>
+    <tr>
+        <td>Số ngày thuê</td><td><input type="number" name="numDay" id="numDay"></td>
+    </tr>
+    <tr>
+        <td>Loại dịch vụ</td>
+        <td>
+            <select id="service">
+                <option value="villa">Villa - 500$/ 1 ngày</option>
+                <option value="house">House - 300$/1 ngày</option>
+                <option value="room">Room - 100$/1 ngày</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Loại phòng thuê</td>
+        <td>
+            <select id="rentRoom">
+                <option value="vip">Vip</option>
+                <option value="business">Business</option>
+                <option value="normal">Normal</option>
+            </select>
+        </td>
+    </tr>
+</table> <br>
+<input type="button" value="Giá đã giảm" onclick="priceDown()">
+    <input  type="reset" value="Đặt lại"> <br>
+    <p id="showvilla"></p>
+    <p id="showhouse"></p>
+    <p id="showroom"></p>
+</form>
+<hr style="border: 3px white solid">
+<a href="../Yêu%20cầu%202/yc2.html">Chuyển đến yêu cầu 2</a><br><br>
+<a href="../Yêu%20cầu%203/yc3.html">Chuyển đến yêu cầu 3</a>
+<script src="Furama.js"></script>
+</body>
+</html>

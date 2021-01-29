@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [11,3,5,7,3,10,5];
+    let max = arr[0];
+    function findMax(arr) {
+        for (let i=1;i<arr.length;i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        document.write("Giá trị lớn nhất của mảng là: "+max);
+    }
+    findMax(arr)
+</script>
+</body>
+</html>

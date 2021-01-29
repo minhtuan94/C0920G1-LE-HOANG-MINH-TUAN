@@ -9,14 +9,14 @@
     let n = parseInt(prompt("Nhập n: "));
     let m =1;
     let s = 0;
-    for (let i=1;i<=n;i++) {
+    for (let i=1;i<=n;i++) {  //tính từng phần tử 1/(2*i-1)
         console.log(i);
-        for (let j=0;j<=2*i-2;j++) {
+        for (let j=0;j<=2*i-2;j++) { //tính mẫu
             console.log(j);
-            m = m*(2*i-1-j);
+            m = m*(2*i-1-j);//tính mẫu là tích của 2*i-1 trừ thêm j chạy từ 0 đến 2*i -1 -1
         }
-        s += 1/m;
-        m=1;
+        s += 1/m; //tính từng phần tử của 1/tích
+        m=1; //set lại m=1 để tính tích của phần tử mới
     }
     document.write(s);
 </script>

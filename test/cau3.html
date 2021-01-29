@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //viết chương trình nhập ngày tháng năm. Tính xem ngày đó là ngày thứ bao nhiêu trong năm
+    //Yêu cầu nâng cao: đối với tháng 2 cần kiểm tra xem có phải là năm nhuận hay không
+    //Nếu năm nhuận thì tổng số ngày của một năm tăng lên 366 ngày
+    let regexDate = /^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/;
+    let checkvalid = false;
+    let day;
+    function findDate(dates) {
+        do {
+            dates = prompt("Input Ngày tháng năm: ");
+            alert(dates);
+            if (regexDate.test(dates)) {
+                checkvalid = true;
+                day = dates.split('/')[0];
+                alert(day)
+            } else {
+                alert("Ngày sinh bạn nhập không hợp lệ");
+            }
+        } while (!checkvalid);
+    }
+findDate();
+</script>
+</body>
+</html>

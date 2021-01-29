@@ -4,8 +4,8 @@ function clearNumber() { //khi click vào nút C
 }
 function inputNumber(number) { //khi click vào nút bất kì
     if(temp) { //nếu biến tạm là đúng
-        if (number == "+" || number == "-" || number == "*" || number == "/") { //nếu nút đó là các dấu toán tử
-            document.getElementById("num").value += number//chương trình sẽ viết tiếp dấu toán tử
+        if (number === "+" || number === "-" || number === "*" || number === "/") { //nếu nút đó là các dấu toán tử
+            document.getElementById("num").value += number;//chương trình sẽ viết tiếp dấu toán tử
         } else { //nếu nút đó là số
             document.getElementById("num").value = number;//chương trình sẽ xóa số cũ và thay bằng số hiện tại
         }
@@ -15,7 +15,7 @@ function inputNumber(number) { //khi click vào nút bất kì
     temp =false;//đặt biến sai
 }
 function calculator() { //khi click vào nút dấu bằng
-    document.getElementById("num").value=(eval(document.getElementById("num").value))//thực hiện tính toán
+    document.getElementById("num").value=(eval(document.getElementById("num").value));//thực hiện tính toán
     temp =true; //đặt biến đúng
 }
 // Lúc đầu khai báo biến temp là sai thì sẽ thực hiện nhánh else khi biến tạm là sai, lúc đó chương trình sẽ viết thêm số hoặc

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Nhâp một mảng số nguyên không qua 50 phần tử, đưa ra màn hình trung bình cộng các số chia hết cho 3 có trong mảng
+    let numbersArray;
+    do {
+        numbersArray = parseInt(prompt("Nhập vào số lượng phần tử"));
+        if (numbersArray<0||numbersArray>50||isNaN(numbersArray)) {
+            alert("Bạn nhập không đúng, vui lòng nhập lại");
+        }
+    } while (numbersArray<0||numbersArray>50||isNaN(numbersArray));
+    let arrS = [];
+    for (let i=0;i<numbersArray;i++) {
+        arrS[i] = parseInt(prompt("Nhập vào phần tử thứ "+(i+1)));
+    }
+    alert(arrS);
+    let sum = 0;
+    let average;
+    let count = 0;
+    for (let i=0;i<arrS.length;i++) {
+        if (arrS[i]%3===0) {
+            sum += arrS[i];
+            count++;
+            average = sum/count;
+        }
+    }
+    alert("Số trung bình cộng là: "+average);
+</script>
+</body>
+</html>

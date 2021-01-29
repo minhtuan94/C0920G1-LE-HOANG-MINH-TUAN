@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>câu 2</title>
+</head>
+<body>
+<script>
+
+    function menu() {
+
+        let choose = parseInt(prompt('1. Hiển thị' + '\n2. thoát'));
+        switch (choose) {
+            case 1:
+                displayscore();
+                break;
+            case 2:
+                exit();
+                break;
+            default:
+                alert("Failed");
+                break;
+        }
+    }
+    function exit() {
+
+    }
+    function displayscore() {
+        let score;
+        do {
+            score = parseInt(prompt("nhập vào điểm số của học sinh: "));
+        } while (score<=0 || score>=100 || isNaN(score));
+        if (score<48) {
+            alert("trượt");
+        } else {
+            let temp = parseInt(score / 5) * 5 + 5;
+            if (temp - score < 3) {
+                alert("Số điểm của học sinh sau khi đã được làm tròn: "+temp);
+            } else {
+                alert("Số điểm không được làm tròn: "+score);
+            }
+        }
+        menu();
+    }
+   menu();
+</script>
+</body>
+</html>

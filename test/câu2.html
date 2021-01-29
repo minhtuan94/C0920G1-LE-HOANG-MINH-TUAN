@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Viết hàm nhập vào một số nguyên dương, kiểm tra xem số đó có phải là số hoàn hảo hay không,
+    //trả về true nếu số đó là số hoàn hảo và ngược lại là false
+    let sum = 0;
+    function perfectNumbers(numb) {
+        for (let i=1;i<numb;i++) {
+            if (numb%i===0) {
+                sum += i;
+            }
+        }
+        alert("Tổng của các ước của số đó là: "+sum);
+        if (sum === numb) {
+            alert(true);
+        } else {
+            alert(false);
+        }
+    }
+    let k = parseInt(prompt("Nhập vào một số bất kỳ lớn hơn 0"));
+    perfectNumbers(k);
+</script>
+</body>
+</html>

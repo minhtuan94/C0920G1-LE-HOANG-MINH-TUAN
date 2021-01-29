@@ -1,0 +1,32 @@
+package introduction_to_java.pratice.th_1;
+
+import java.util.Scanner;
+
+public class ptbac1 {
+    public static void main(String[] args) {
+        System.out.println("Linear Equation Resolver");
+        System.out.println("Given a equation as 'a * x + b = 0', please enter constants:");
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("a: ");
+        double a = scanner.nextDouble();
+
+        System.out.print("b: ");
+        double b = scanner.nextDouble();
+
+        System.out.print("c: ");
+        double c = scanner.nextDouble();
+
+        if (a != 0) {
+            double answer = (c - b) / a;
+            System.out.printf("phương trình có nghiệm là x = %f!\n", answer);
+        } else {
+            if (b == 0) {
+                System.out.print("phương trình có vô số nghiệm");
+            } else {
+                System.out.print("phương trình vô nghiệm");
+            }
+        }
+    }
+}
